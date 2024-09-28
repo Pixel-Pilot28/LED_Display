@@ -1,19 +1,3 @@
-"""
-Icons in this project come from: https://github.com/basmilius/weather-icons/tree/dev/production/fill/png/64
-
-
-        self.api_key = '398e4d9d4113e4bb20130197ad39f9dc'  # Replace with your OpenWeatherMap API key
-        self.location = {'lat': 37.3227, 'lon': 77.261}
-if not os.path.exists(resized_dir):
-    os.makedirs(resized_dir)
-
-for filename in os.listdir(icon_dir):
-    if filename.endswith(".png"):
-        img = Image.open(os.path.join(icon_dir, filename))
-        img = img.resize(icon_size, Image.LANCZOS)
-        img.save(os.path.join(resized_dir, filename))
-"""
-
 import os
 import time
 import json
@@ -25,8 +9,8 @@ from threading import Thread
 class WeatherApp:
     def __init__(self, display_controller):
         self.display_controller = display_controller
-        self.api_key = '398e4d9d4113e4bb20130197ad39f9dc'  # Replace with your OpenWeatherMap API key
-        self.location = {'lat': 37.3227, 'lon': 77.261}  # Richmond, VA, US
+        self.api_key = 'Key'  # Replace with your OpenWeatherMap API key
+        self.location = {'lat': xx.xxx, 'lon': xx.xxx}  # Replace with your lat long
         self.font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 8)
         self.small_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 7)
         self.icon_path = "/home/pi/Projects/Display/weather_icons_resized"  # Adjust the path as needed
