@@ -126,7 +126,7 @@ If the correct team abbreviation is not found, the code uses ESPN's official tea
   - Potentiometer Knob - Soft Touch T18 - Blue: http://www.adafruit.com/product/2048
 
 **3D-Printed Enclosure**
-  - LINK
+  - 3D Printing file: https://www.thingiverse.com/thing:6781511
   - M2 and M3 nuts and screws: https://www.aliexpress.us/item/3256805018002859.html
 
 ## Contributions
