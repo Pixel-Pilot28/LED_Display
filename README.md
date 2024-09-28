@@ -129,6 +129,21 @@ If the correct team abbreviation is not found, the code uses ESPN's official tea
   - 3D Printing file: https://www.thingiverse.com/thing:6781511
   - M2 and M3 nuts and screws: https://www.aliexpress.us/item/3256805018002859.html
 
+2. **Wiring**
+
+     - Pot to ADS7830
+          - gnd-output(A1)-5v(VIN) (the other way would reduce middle pin voltage as you turn it clockwise)
+          - Gnd-A2
+               - Gnd pin on pot will thus have two wires connecting to it
+      - Usb & DC wires to DC port
+           - Red usb (V-right) + bare red wire to red center of port ADD SHRINK WRAP
+           - green usb (G-left) +bare green wire to the outside of port ADD SHRINK WRAP
+     - SEEMA to rgb matrix bonnet
+          - Black to GND
+          - Red to 5V
+          - Blue to SDA
+          - Yellow to SCL
+
 ## Contributions
 
 Feel free to fork this project, submit issues, or contribute new features. Whether it's adding new apps to the display or improving existing ones, all contributions are welcome.
@@ -136,7 +151,3 @@ Feel free to fork this project, submit issues, or contribute new features. Wheth
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-Happy hacking!
