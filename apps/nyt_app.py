@@ -1,6 +1,3 @@
-"""LGBGr9j84KlTovyAeFBuGq5AuXuZeomg
-"""
-
 import os
 import json
 import time
@@ -11,7 +8,7 @@ from threading import Thread
 class NYTApp:
     def __init__(self, display_controller):
         self.display_controller = display_controller
-        self.api_key = 'LGBGr9j84KlTovyAeFBuGq5AuXuZeomg'  # Replace with your NYT API key
+        self.api_key = 'KEY'  # Replace with your NYT API key
         self.cache_path = "/home/pi/Projects/Display/py_cache/nyt_cache.json"
         self.font_banner = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 10)
         self.font_title = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 11)
