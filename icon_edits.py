@@ -1,3 +1,5 @@
+# From https://learn.adafruit.com/led-matrix-sports-scoreboard?view=all
+
 import os
 import math
 import requests
