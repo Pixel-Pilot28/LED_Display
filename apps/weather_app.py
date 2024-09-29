@@ -1,3 +1,5 @@
+# Icons in this project come from: https://github.com/basmilius/weather-icons/
+
 import os
 import time
 import json
