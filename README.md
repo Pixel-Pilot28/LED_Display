@@ -12,10 +12,10 @@ Display real-time scores, schedules, and match details for your favorite teams! 
 - Auto-updates every two minutes for live games.
 
 ### 2. **News App**
-Stay informed with the latest headlines! Using the New York Times API, this app fetches and displays breaking news on your LED matrix.
-- Scroll through top headlines and news categories.
+Stay informed with the latest headlines! Using the New York Times API, this app fetches and displays breaking news and top stories on your LED matrix.
+- The display will switch between top headlines and breaking news, showing the news category followed by the article title.
 - Customizable fonts for titles and news ticker.
-- Cache news data locally and updated periodically.
+- News data locally to a JSON file and updated periodically every 10 minutes to save on API calls.
 
 ### 3. **Flight Display App**
 Track real-time flight information in your area, using data from a local ADSB listener or external APIs.
@@ -29,7 +29,7 @@ Switches between a real-time weather display with an hourly outlook and a four-d
 - The current weather display will also show the predicted weather over the next few hours.
 - The future weather display will show the daily forecast for the next four days.
 
-### 5. **Flight Display App**
+### 5. **Date and Time App**
 A basic app that simply displays the date and time 
 - Shows the current date or time.
 
@@ -41,27 +41,27 @@ This fun animation shows when the system is shutting down:
 
 ### 1. **Display Control**
 Uses an integrated potentiometer to adjust the brightness of the display and completely turn the display off. 
-- While in the "On" position, the voltage data read from the potentiometer will adjust the brightness of the display.
-- When the potentiometer is switched off, the display will turn off while the Raspberry Pi remains on.
-- If the potentiometer is switched off and the rotary encoder is depressed, the shutdown animation will begin and shut down the display and Raspberry Pi.
+- While in the "On" position, the voltage data read from the potentiometer will adjust the display's brightness such that turning the potentiometer will adjust the brightness.
+- When the potentiometer is switched fully off, the display will turn off while the Raspberry Pi remains on.
+- If the potentiometer is switched off and the rotary encoder is depressed, the shutdown animation will begin, and both the display and Raspberry Pi will be shut down.
 
 ### 2. **App Switching**
 Can turn the rotary encoder to switch between apps.
 - Can turn clockwise to move forward or counterclockwise to move backward in the app list.
-- If the display is turned off and the rotary encoder is pressed, the entire system will turn off.
+- NOTE: The entire system will turn off if the display is turned off and the rotary encoder is pressed.
 
 ## Hardware Requirements
 - **Raspberry Pi** (Model 3 or 4 recommended)
 - **RGB LED Matrix Display** (64x32 pixels)
 - **Rotary Encoder** and **Potentiometer** for input
-- **Optional ADS-B Antenna** for flight tracking
+- **Optional ADS-B Receiver** for local flight tracking
 
 ## Software Requirements
 - Python 3.7 or higher
 - Pillow (for image rendering)
 - Requests (for API calls)
 - NYTimes API Key (for News App)
-- ESPN API (no API key required for scoreboard and team data)
+- Openweather API key
 
 ## Setup Instructions
 
@@ -77,7 +77,7 @@ Can turn the rotary encoder to switch between apps.
    ```
 
 3. **Configure the Apps**
-   - **Soccer App**: Edit `config.json` to add your favorite teams. You can find the correct abbreviations for each team using ESPN’s team API. The app will fetch schedules and live scores based on these settings.
+   - **Sports App**: Edit `config.json` to add your favorite teams. You can find the correct abbreviations for each team using ESPN’s team API. The app will fetch schedules and live scores based on these settings.
    - **News App**: Insert your New York Times API key in the `nyt_cache.json` file located at `/home/pi/Projects/Display/py_cache/`.
    - **Flight Display App**: If using a local ADS-B antenna, configure the local listener IP in `flight_app.py`. Otherwise, it defaults to using a web API.
    - **Weather App**: Input your location and API OpenWeatherMap key. 
@@ -97,10 +97,6 @@ Icons are essential for visualizing team logos in the Sports App. They are dynam
 
 If the correct team abbreviation is not found, the code uses ESPN's official team abbreviations to locate and display the correct icon automatically.
 
-## Customization
-
-- **Fonts**: The display text is rendered using two font sizes, 9pt for large text and 7pt for smaller details. These can be modified in the configuration file.
-- **Display Rotation**: You can control how fast the display rotates between different apps or even prioritize live games in the Sports App when multiple games are in progress.
 
 ## Building the display
 
