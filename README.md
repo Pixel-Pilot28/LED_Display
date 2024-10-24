@@ -67,7 +67,7 @@ Can turn the rotary encoder to switch between apps.
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/rpi-led-display.git
+   git clone https://github.com/Pixel-Pilot28/LED_Display.git
    cd rpi-led-display
    ```
 
